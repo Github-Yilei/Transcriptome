@@ -23,6 +23,8 @@ def path2file(input_path):
     p = Path(input_path)
     file_list = list(p.glob("*/*gene_abundances.tsv"))
 
+# Sort the sample names by the sample ID
+    file_list.sort()
     return file_list
 
 def TidyMatrix(args):
